@@ -1,15 +1,13 @@
 import cv2
 import numpy as np
 
-# Inisialisasi kamera
-cap = cv2.VideoCapture(0)
+# Membaca gambar dari file
+image_path = 'rgb.png'
+frame = cv2.imread(image_path)
 
-while True:
-    ret, frame = cap.read()  # Unpack the return value
-    if not ret:
-        print("Error: Could not read frame.")
-        break
-
+if frame is None:
+    print("Error: Could not read image.")
+else:
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
     # Rentang warna merah dalam HSV
@@ -37,6 +35,14 @@ while True:
     # Menggambar bounding box di sekitar objek yang terdeteksi
     for contour in contours:
         x, y, w, h = cv2.boundingRect(contour)
+        
+        # Menambahkan padding pada bounding box
+        padding = 10
+        x = max(x - padding, 0)
+        y = max(y - padding, 0)
+        w = min(w + 2 * padding, frame.shape[1] - x)
+        h = min(h + 2 * padding, frame.shape[0] - y)
+        
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
         
         # Menentukan warna yang terdeteksi
@@ -57,8 +63,5 @@ while True:
     cv2.imshow("Mask", mask)
     cv2.imshow("Result", result)
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-cap.release()
-cv2.destroyAllWindows()
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
