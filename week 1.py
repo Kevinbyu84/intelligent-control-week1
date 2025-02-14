@@ -20,6 +20,14 @@ while True:
     mask = cv2.inRange(hsv, lower_red, upper_red)
     result = cv2.bitwise_and(frame, frame, mask=mask)
 
+    # Menemukan kontur
+    contours, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    for contour in contours:
+        x, y, w, h = cv2.boundingRect(contour)
+        if w * h > 10000:  # Hanya tampilkan bounding box yang besar
+            cv2.rectangle(result, (x, y), (x + w, y + h), (0, 255, 0), 2)
+            cv2.putText(result, "Merah", (x, y -10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+
     # Menampilkan hasil
     cv2.imshow("Frame", frame)
     cv2.imshow("Mask", mask)
