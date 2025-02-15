@@ -68,7 +68,7 @@ Analisis Hasil:
         cv2.putText(result, "Merah", (x + 5, y + 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
     ```
 - Bagaimana metode ini dapat diterapkan dalam intelligent control systems?
-    'Metode deteksi warna dan bounding box ini dapat diterapkan dalam sistem kontrol cerdas seperti pada sistem pengawasan, robotika, dan kendaraan otonom.'
+    Metode deteksi warna dan bounding box ini dapat diterapkan dalam sistem kontrol cerdas seperti pada sistem pengawasan, robotika, dan kendaraan otonom.
 
 Diskusi:
 - Bagaimana AI dapat meningkatkan sistem kontrol berbasis Computer Vision?
