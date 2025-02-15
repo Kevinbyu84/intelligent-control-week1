@@ -26,7 +26,7 @@ while True:
         x, y, w, h = cv2.boundingRect(contour)
         if w * h > 10000:  # Hanya tampilkan bounding box yang besar
             cv2.rectangle(result, (x, y), (x + w, y + h), (0, 255, 0), 2)
-            cv2.putText(result, "Merah", (x, y -10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+            cv2.putText(result, "Merah", (x + 5, y + 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
     # Menampilkan hasil
     cv2.imshow("Frame", frame)
