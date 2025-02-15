@@ -33,7 +33,7 @@ Proyek ini adalah bagian dari mata kuliah Praktikum Kontrol Cerdas pada Program 
 
 1. Jalankan skrip `Deteksi Warna.py`:
     ```bash
-    python Deteksi/ Warna.py
+    python Deteksi Warna.py
     ```
 2. Skrip akan membuka jendela video yang menampilkan hasil deteksi warna dengan bounding box dan teks warna.
 
@@ -50,7 +50,7 @@ Analisis Hasil:
     ```python
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     ```
-    2. Definisi Rentang Warna: RRentang ini mencakup nilai-nilai Hue, Saturation, dan Value yang sesuai dengan warna. Contoh HSV warna merah:
+    2. Definisi Rentang Warna: Rentang ini mencakup nilai-nilai Hue, Saturation, dan Value yang sesuai dengan warna. Contoh HSV warna merah:
     ```python
     lower_red = np.array([0, 120, 70])
     upper_red = np.array([10, 255, 255])
@@ -68,7 +68,7 @@ Analisis Hasil:
         cv2.putText(result, "Merah", (x + 5, y + 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
     ```
 - Bagaimana metode ini dapat diterapkan dalam intelligent control systems?
-    Metode deteksi warna dan bounding box ini dapat diterapkan dalam sistem kontrol cerdas seperti pada sistem pengawasan, robotika, dan kendaraan otonom.
+    'Metode deteksi warna dan bounding box ini dapat diterapkan dalam sistem kontrol cerdas seperti pada sistem pengawasan, robotika, dan kendaraan otonom.'
 
 Diskusi:
 - Bagaimana AI dapat meningkatkan sistem kontrol berbasis Computer Vision?
