@@ -1,0 +1,23 @@
+Analisis dan Diskusi Praktikum Deteksi Objek
+
+Analisis Hasil:
+•	Apa yang terjadi saat objek orang muncul di kamera? 
+    Ketika objek orang muncul di kamera, model YOLO akan mendeteksi objek tersebut, menggambar bounding box di sekitar orang tersebut, menambahkan label dengan nama objek dan confidence score, dan menampilkan hasilnya dalam jendela video secara real-time.
+•	Bagaimana sistem mendeteksi objek?
+    Dalam sistem ini pendeteksian objek menggunakan teknik pemrosesan citra dengan OpenCV. Berikut adalah langkah-langkah yang dilakukan:
+    i.	Kamera mengambil gambar secara real-time dan menyimpannya dalam variabel.
+    ii.	Model YOLO melakukan deteksi objek pada gambar yang diambil. Hasil deteksi disimpan dalam variabel.
+    iii.	Kode mengiterasi setiap hasil deteksi yang ditemukan oleh model YOLO. Setiap hasil deteksi berisi informasi tentang bounding box, confidence score, dan kelas objek..
+    iv.	Bounding box digambar di sekitar kontur yang terdeteksi. Hanya kontur dengan area yang lebih besar dari nilai tertentu yang akan ditampilkan untuk menghindari deteksi noise atau objek kecil.
+    v.	Gambar dengan bounding box dan label ditampilkan dalam jendela.
+•	Bagaimana metode ini dapat diterapkan dalam intelligent control systems?
+    Metode deteksi objek menggunakan YOLO (You Only Look Once) yang Anda gunakan dalam kode dapat diterapkan dalam sistem kontrol cerdas (intelligent control systems) dengan berbagai cara. Contoh aplikasi metode ini antara lain, Robotika, Kendara Otonomus, dan Sistem Pengawasan.
+
+Diskusi:
+•	Bagaimana AI dapat meningkatkan sistem kontrol berbasis Computer Vision?
+    Penggunaan AI dapat meningkatkan akurasi deteksi dengan dilatih dengan akurasi yang lebih baik. AI dapat terus belajar dan beradaotasi sehingga dapat memperbaiki kinerja dan mengurangi kesalahan.
+•	Apa kelebihan dan kekurangan metode deteksi objek?
+    Kelebihan metode ini relatif sederhana dan cepat untuk diimplementasikan, apat mendeteksi beberapa objek dalam satu frame. Aplikasi penggunaan yang luas seperti robotika dan pengawasan. Kekurangan metode ini sangat sensitif terhadap perubahan kondisi pencahayaan. Latensi dalam pemrosesan dapat menjadi masalah.
+•	Bagaimana cara meningkatkan akurasi sistem deteksi objek?
+    Untuk meningkatkan akurasi sistem deteksi objek, dapat dilakukan dengan beberapa hal seperti kalibrasi kamera, peningkatan resolusi gambar, dan gunakan model pembelajaran mesin atau deep learning yang dilatih dengan dataset yang besar dan beragam untuk mendeteksi objek dengan lebih akurat..
+

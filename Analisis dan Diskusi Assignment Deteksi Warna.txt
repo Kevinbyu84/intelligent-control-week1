@@ -1,3 +1,4 @@
+Analisis dan Diskusi Assignment Deteksi Warna
 Analisis Hasil:
 - Apa yang terjadi saat objek berwarna merah muncul di kamera?
     Ketika terdapat objek berwarna merah muncul di kamera akan terdeteksi oleh sistem sehingga akan terbentuk bounding box yang mendeteksi objek berwarna merah
