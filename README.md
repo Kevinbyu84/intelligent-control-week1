@@ -173,7 +173,6 @@ cv2.destroyAllWindows()
 *   `cap.release()`: Melepaskan sumber daya yang digunakan oleh objek `VideoCapture`. Ini penting untuk membebaskan kamera agar dapat digunakan oleh aplikasi lain.
 *   `cv2.destroyAllWindows()`: Menutup semua jendela OpenCV yang terbuka.
 
-Oke, mari kita bedah kode ini baris demi baris supaya Anda paham penggunaannya:
 
 ***Praktikum Deteksi Objek***
 
